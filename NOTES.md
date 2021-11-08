@@ -4,8 +4,8 @@
 ✅ Git .gitignore
 ✅ Prettier (files: .prettierrc, .prettierignore)
 ✅ Install Extentions: prettier and eslint
-✅ Eslint (configs: AirBnb prettier) (plugins:prettier) (files .eslintc, .eslingnore) (command to run after installation to connect eslint to prettier: npm install --save-dev eslint-plugin-prettier, npm i eslint-config-prettier --save-dev )
-Jest (files: jest.config.js)
+✅ Eslint (configs: AirBnb prettier) (plugins:prettier) (files .eslintc, .eslingnore, src/dummy.js) (command to run after installation to connect eslint to prettier: npm install --save-dev eslint-plugin-prettier, npm i eslint-config-prettier --save-dev )
+Jest (plugins: jest snippets) (plugins:files: jest.config.js, tests/dummy.test.js) (notes: short cuts 'dec' tab , 'test' tab)
 Husky
 commitmessage, precommit, prepush hooks.
 Commitlint
