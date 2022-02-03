@@ -9,14 +9,11 @@ cache:
   - "~/.npm"
   - "~/.cache"
   npm: true
-sonarcloud:
-    organization: "ibmrepositories"
-    token:
-      secure: $SONAR_TOKEN
-
+addons: 
+  sonarcloud: true
 jobs:
   include:
   - stage: Run SonarCloud
     script:
     # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-    - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=jumpstart
+    - sonar-scanner -D sonar.organization="ibmrepositories" -D sonar.login="${SONAR_TOKEN}" -D sonar.projectKey="jumpstart" -D sonar.projectName="jumpstart"
