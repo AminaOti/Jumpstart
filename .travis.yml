@@ -13,7 +13,16 @@ addons:
   sonarcloud: true
 jobs:
   include:
-  - stage: Run SonarCloud
+  - stage: Run snyk test & monitor
+    script:
+    - snyk auth "${SNYK_AUTH_TOKEN}"
+    - snyk test --dev
+    after_success:
+    - snyk monitor
+  - stage: Run unit tests
+    script:
+    - npm run test:unit
+  - stage: Run SonarCloud Scanner
     script:
     # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
     - sonar-scanner -D sonar.organization="ibmrepositories" -D sonar.login="${SONAR_TOKEN}" -D sonar.projectKey="jumpstart" -D sonar.projectName="jumpstart"
