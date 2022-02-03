@@ -9,6 +9,10 @@ cache:
   - "~/.npm"
   - "~/.cache"
   npm: true
+sonarcloud:
+    organization: "ibmrepositories"
+    token:
+      secure: $SONAR_TOKEN
 
 jobs:
   include:
