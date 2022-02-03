@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test:unit",
+    "test": "snyk test --dev && npm run test:unit",
     "test:unit": "jest",
     "test:unit:watch": "npm run test:unit -- --watch",
     "prepare": "husky install"
@@ -35,5 +35,8 @@
     "package.json": [
       "typesync --silent"
     ]
+  },
+  "dependencies": {
+    "snyk": "^1.848.0"
   }
 }
