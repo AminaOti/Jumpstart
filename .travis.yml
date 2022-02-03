@@ -1,0 +1,17 @@
+language: node_js
+dist: xenial
+node_js:
+- 16.13.2
+install:
+- npm ci
+cache:
+  directories:
+  - "~/.npm"
+  - "~/.cache"
+  npm: true
+
+jobs:
+  include:
+  - stage: Test
+    script:
+    - echo 'First Travis test'
