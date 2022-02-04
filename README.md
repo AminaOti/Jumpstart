@@ -1,3 +1,5 @@
+# How use this template repository 
+## 1) Convert the template into a new repositry 
 This is a template repository for CP Farm. To use this template run the command:
 
 ```
@@ -6,8 +8,7 @@ This is a template repository for CP Farm. To use this template run the command:
  $ git checkout master
  ```
 
-
- ## Setting up CI
+ ## 2) Set up CI
  ### Setting up Snyk auth token in Travis
  1. Retrieve SNKY_AUTH token from snky account
  2. Log into Travis: $travis login -I -t your-travis-token -e https://travis.ibm.com/api --github-token=<github-personal-access-token> && travis endpoint --set-default -e https://travis.ibm.com/api
