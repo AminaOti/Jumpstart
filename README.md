@@ -1,6 +1,6 @@
 # How use this template repository 
 ## 1) Convert the template into a new repositry 
-This is a template repository for CP Farm. To use this template run the command:
+This is a template repository for XP Farm. To use this template run the command:
 
 ```
  $ gh repo create REPOSITRY-NAME  --public --confirm --template="github.ibm.com/Amina-Oti/jumpstart"
