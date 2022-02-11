@@ -8,6 +8,7 @@
     "test:security:dev": "snyk test --dev",
     "test:unit": "jest",
     "test:unit:watch": "npm run test:unit -- --watch",
+    "pre-push": "npm run test:unit",
     "prepare": "husky install"
   },
   "author": "Amina Oti",
