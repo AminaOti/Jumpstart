@@ -9,7 +9,9 @@
     "test:unit": "jest",
     "test:unit:watch": "npm run test:unit -- --watch",
     "pre-push": "npm run test:unit && npm run test:security:dev",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "detect-secrets": "docker run --rm -v ${INIT_CWD}:/code ibmcom/detect-secrets-hook:0.13.1.ibm.47.dss --baseline .secrets.baseline",
+    "detect-secrets:update-baseline": "docker run --rm -v ${INIT_CWD}:/code ibmcom/detect-secrets:0.13.1.ibm.47.dss scan --update .secrets.baseline"
   },
   "author": "Amina Oti",
   "license": "ISC",
@@ -36,6 +38,9 @@
     "*.js": "eslint --cache --fix",
     "package.json": [
       "typesync --silent"
+    ],
+    "*": [
+      "npm run detect-secrets"
     ]
   },
   "dependencies": {
