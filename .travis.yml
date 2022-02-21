@@ -24,6 +24,7 @@ jobs:
     - npm run test:unit
   - stage: Run detect secrets
     script:
+    - detect-secrets audit .secrets.baseline
     - npm run detect-secrets --relative
   - stage: Run SonarCloud Scanner
     script:
