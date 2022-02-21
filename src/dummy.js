@@ -5,4 +5,6 @@ const secret = () => {
   console.log(password);
 };
 
-module.exports = { dummy, secret };
+console.log(secret);
+
+module.exports = { dummy };
