@@ -24,9 +24,7 @@ jobs:
     - npm run test:unit
   - stage: Run detect secrets
     script:
-    - npm run detect-secrets:update-baseline
-    - git add .secrets.baseline
-    - npm run detect-secrets src/dummy.js
+    - npm run detect-secrets $(git ls-files)
   - stage: Run SonarCloud Scanner
     script:
     - sonar-scanner -D sonar.organization="ibmrepositories" -D sonar.login="${SONAR_TOKEN}"
