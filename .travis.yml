@@ -22,6 +22,9 @@ jobs:
   - stage: Run unit tests
     script:
     - npm run test:unit
+  - stage: Run detect secrets
+    script:
+    - npm run detect-secrets --relative
   - stage: Run SonarCloud Scanner
     script:
     - sonar-scanner -D sonar.organization="ibmrepositories" -D sonar.login="${SONAR_TOKEN}"
