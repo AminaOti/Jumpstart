@@ -1,3 +1,8 @@
 const dummy = () => true;
 
-module.exports = dummy;
+const secret = () => {
+  const password = 'FAKEPASSWORD';
+  console.log(password);
+};
+
+module.exports = { dummy, secret };
