@@ -7,4 +7,4 @@ const secret = () => {
 
 console.log(secret);
 
-module.exports = { dummy };
+module.exports = dummy;
