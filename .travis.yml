@@ -22,15 +22,13 @@ jobs:
     - snyk test --dev
     after_success:
     - snyk monitor
-  - stage: Run unit tests
+  - stage: Run unit tests & sonar-scanner
     script:
     - npm run test:unit
+    - sonar-scanner
   - stage: Run detect secrets
     script:
     - npm run detect-secrets $(git ls-files)
-  - stage: Run SonarCloud Scanner
-    script:
-    - sonar-scanner
 env:
   global:
     # SNKY
