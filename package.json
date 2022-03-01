@@ -39,7 +39,8 @@
     "*.js": "eslint --cache --fix",
     "package.json": [
       "typesync --silent"
-    ]
+    ],
+    "*": "npm run detect-secrets"
   },
   "dependencies": {
     "snyk": "^1.848.0"
