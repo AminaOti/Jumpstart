@@ -12,13 +12,10 @@ cache:
 addons:
   sonarcloud: 
     organization: 'ibmrepositories'
-    token: 
-      secure: "RusWCKyhDypxVBgmxkJ4lOrVNW2iTtXaWquWibSIXHzHE5vgQI1skrMK/QVmuzydE5u2VXL2k3frU7eX2UiGC8l9vrXDyU361QtzRgJYmm4/ja0pMJsiVhpaayc3EB5H1hZBR1oknDhXLHYhmqh2sLaZPcSnSk4kZsW5rt0Hf4hqb8SQOYNVxMqW5XE67zoWIPB8CaH07WXIosUZZsfdKwJfgnJV7l1AmxbPQ555o32VIFxf+0JDqcrWZVeVtxsvn2zHRAeWjqhEjckwU/U/gkRJmS+/WFXzXRYbFLdu6o2yIP95Wb7ipL/RTxUtRtxGU1tMvqZM7ikTt77mQx3mVpg/ocvFBWP9/+qrJj02yjP1beY7FVJgwjI3DRTr5MZQeUcXiRUF0iGnBBXV6mCYcWfiCdmNLQvcL3m8khL5V+6BzLWW5ITiWLqWBOfgs9ZUXCFt4aPBJ1u2mIpQXdkA2s1fi1eoJRNPVcVd9gBd0Q0im30cWrEpu1k36OiExwHipOkODw2pip5DVE1zC7zDZ4e8VvklKNDOTbvnfGMkW9Sc+3V1kzn71YAUj8mZwMQvGMqlbN0doEtBZaMchF4R42Ic5Gri6qEnrXbrn87r1RK+95kZccM2Mglwu77DvglUXBnDoQmjY1cAx0829Ynnd3BVAokvpV+1O9EBQfNrH+0="
 jobs:
   include:
   - stage: Run snyk test & monitor
     script:
-    - snyk auth "${SNYK_AUTH_TOKEN}"
     - snyk test --dev
     after_success:
     - snyk monitor
