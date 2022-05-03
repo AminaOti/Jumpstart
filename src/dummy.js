@@ -1,7 +1,3 @@
-const dummy = () => {
-  const password = 'FAKEPASSWORD';
-  console.log(password);
-  return true;
-};
+const dummy = () => true;
 
 module.exports = dummy;
