@@ -1,4 +1,9 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
 version: v1.22.1
-ignore: {}
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  SNYK-JS-NWSAPI-2841516:
+    - jest > @jest/core > jest-config > jest-environment-jsdom > jsdom > nwsapi:
+        reason: 'no patch available '
+        expires: '2022-07-28T11:34:18.995Z'
 patch: {}

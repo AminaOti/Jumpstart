@@ -12,7 +12,8 @@
     "prepare": "husky install",
     "detect-secrets": "docker run --rm -v ${INIT_CWD}:/code ibmcom/detect-secrets-hook:0.13.1.ibm.47.dss --baseline .secrets.baseline",
     "detect-secrets:exclude": "docker run --rm -v ${INIT_CWD}:/code ibmcom/detect-secrets:0.13.1.ibm.47.dss scan --update .secrets.baseline --exclude-files",
-    "detect-secrets:update-baseline": "docker run --rm -v ${INIT_CWD}:/code ibmcom/detect-secrets:0.13.1.ibm.47.dss scan --update .secrets.baseline"
+    "detect-secrets:update-baseline": "docker run --rm -v ${INIT_CWD}:/code ibmcom/detect-secrets:0.13.1.ibm.47.dss scan --update .secrets.baseline",
+    "test": "npm run test:unit"
   },
   "author": "Amina Oti",
   "license": "ISC",
@@ -33,6 +34,7 @@
     "jest": "^27.3.1",
     "lint-staged": "^11.2.6",
     "prettier": "2.4.1",
+    "snyk": "^1.959.0",
     "typesync": "^0.8.0"
   },
   "lint-staged": {
@@ -41,8 +43,5 @@
       "typesync --silent"
     ],
     "*": "npm run detect-secrets"
-  },
-  "dependencies": {
-    "snyk": "^1.848.0"
   }
 }
