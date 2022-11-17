@@ -1,3 +1,3 @@
 # Jumpstart template repository
 
-This is a template repository used in conjunction with jumpstart-shell-script, run the shell script inside jumpstart-shell-script and it will create a new javascript project/repository using this template
+This is a template repository used in conjunction with [Jumpstart Node.js project with a CI] (https://github.com/AminaOti/Jump-start-Node.js-project-with-a-CI), to create a new Node.js project/repository using this template. To use this template, please see the instructions in [Jumpstart Node.js project with a CI] (https://github.com/AminaOti/Jump-start-Node.js-project-with-a-CI)
